@@ -1,0 +1,33 @@
+#PBS -N DNLM-P
+#PBS -q n4h24
+#PBS -l nodes=4:ppn=8
+#PBS -l walltime=02:30:00
+
+cd $PBS_O_WORKDIR
+
+export PKG_CONFIG_PATH=/home/ce5504-11/OpenCV3.1.0-Installer/OpenCV-3.1.0/lib/pkgconfig/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/ce5504-11/OpenCV3.1.0-Installer/OpenCV-3.1.0/lib
+
+./test2.sh 480p.png 0 480pResults_0.txt 11 
+./test2.sh 480p.png 1 480pResults_1.txt 11
+./test2.sh 480p.png 2 480pResults_2.txt 11
+./test2.sh 480p.png 4 480pResults_4.txt 11
+./test2.sh 480p.png 8 480pResults_8.txt 11
+./test2.sh 480p.png 16 480pResults_16.txt 11
+./test2.sh 480p.png 32 480pResults_32.txt 11
+
+./test2.sh 720p.png 0 720pResults_0.txt 11
+./test2.sh 720p.png 1 720pResults_1.txt 11
+./test2.sh 720p.png 2 720pResults_2.txt 11
+./test2.sh 720p.png 4 720pResults_4.txt 11
+./test2.sh 720p.png 8 720pResults_8.txt 11
+./test2.sh 720p.png 16 720pResults_16.txt 11
+./test2.sh 720p.png 32 720pResults_32.txt 11
+
+./test2.sh 1080p.png 0 1080pResults_0.txt 11
+./test2.sh 1080p.png 1 1080pResults_1.txt 11
+./test2.sh 1080p.png 2 1080pResults_2.txt 11
+./test2.sh 1080p.png 4 1080pResults_4.txt 11
+./test2.sh 1080p.png 8 1080pResults_8.txt 11
+./test2.sh 1080p.png 16 1080pResults_16.txt 11
+./test2.sh 1080p.png 32 1080pResults_32.txt 11
